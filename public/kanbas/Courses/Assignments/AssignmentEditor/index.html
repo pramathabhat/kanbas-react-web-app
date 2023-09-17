@@ -1,0 +1,88 @@
+<select>
+  <option selected>Speed Grader</option>
+  <option>Gradescope</option>
+  <option>Handins</option>
+</select>
+<hr />
+<label for="assignmentName"><h4>Assignment Name</h4></label><br />
+<input
+  value="A1 - HTML"
+  id="assignmentName"
+  placeholder="Assignment Name"
+/><br /><br />
+<textarea cols="50" rows="5">
+This is the first assignment to build Kanbas</textarea
+><br /><br />
+<label for="points">Points</label>
+<input
+  value="100"
+  type="number"
+  max="100"
+  min="50"
+  step="5"
+  id="points"
+/><br /><br />
+<label for="assignmentsGroup">Assignment group</label><br />
+<select id="assignmentsGroup">
+  <option selected>ASSIGNMENTS</option>
+  <option>QUIZZES</option>
+  <option>EXAMS</option>
+  <option>PROJECTS</option></select
+><br /><br />
+<label for="displayGradeAs">Display Grade as</label><br />
+<select id="displayGradeAs">
+  <option selected>Percentage</option>
+  <option>Grade</option></select
+><br /><br />
+<label for="submissionType">Submission Type</label><br />
+<select id="submissionType">
+  <option selected>Online</option>
+  <option>In-person</option></select
+><br /><br />
+Online Entry Options<br />
+<input type="checkbox" id="textEntry" />
+<label for="textEntry">Text Entry</label><br />
+<input type="checkbox" id="websiteUrl" />
+<label for="websiteUrl">Website URL</label><br />
+<input type="checkbox" id="mediaRecording" />
+<label for="mediaRecording">Media Recordings</label><br />
+<input type="checkbox" id="studentAnnotations" />
+<label for="studentAnnotations">Student Annotations</label><br />
+<input type="checkbox" id="fileUploads" />
+<label for="fileUploads">File Uploads</label><br /><br />
+<label for="submissionAttempts">Submission Attempts</label><br />
+<select id="submissionAttempts">
+  <option selected>Unlimited</option>
+  <option>10</option>
+  <option>5</option>
+  <option>1</option></select
+><br /><br />
+<label for="plagarismReview">Plagarism Review</label><br />
+<select id="plagarismReview">
+  <option selected>None</option>
+  <option>Required</option></select
+><br /><br />
+<label for="groupAssignment">Group Assignment</label><br />
+<select>
+  <option>This is a group assignment</option></select
+><br /><br />
+<label for="peerReviews">Peer Reviews</label><br />
+<select>
+  <option>Require Peer Reviews</option></select
+><br /><br />
+<label for="assign">Assign</label><br />
+Assign To<br />
+<input value="Everyone" id="assign" /><br /><br />
+<label for="dueDate">Due</label><br />
+<input
+  type="date"
+  value="2023-09-19"
+  min="2023-09-15"
+  max="2023-10-15"
+/><br /><br />
+<label for="availableFrom">Available from</label><br />
+<input type="date" value="2023-09-10" /><br /><br />
+<label for="until">Until</label><br />
+<input type="date" value="2023-09-19" /><br /><br />
+<button>Cancel</button>
+<button>Save</button>

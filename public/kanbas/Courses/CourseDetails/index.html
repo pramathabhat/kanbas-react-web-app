@@ -1,0 +1,98 @@
+<ul>
+  <li>Course Details</li>
+  <li>Sections</li>
+  <li>Navigation</li>
+  <li>Apps</li>
+  <li>Feature Options</li>
+  <li>Integrations</li>
+</ul>
+<h1>Course Details</h1>
+<table>
+  <tr>
+    <td><label>Image:</label></td>
+    <td>
+      <label for="files">Choose Image</label>
+      <input type="file" id="files" style="visibility: hidden" />
+    </td>
+  </tr>
+  <tr>
+    <td><label for="name">Name:</label></td>
+    <td>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS 1-TR]</td>
+  </tr>
+  <tr>
+    <td><label for="courseCode">Course Code:</label></td>
+    <td>CS4550.12631.202410</td>
+  </tr>
+  <tr>
+    <td><label for="blueprint">Blueprint Course:</label></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><label for="courseTemplate">Course Template:</label></td>
+    <td>Enable course as a Course Template</td>
+  </tr>
+  <tr>
+    <td><label for="timeZone">Time Zone:</label></td>
+    <td>
+      <select id="timeZone">
+        <option selected>Eastern Time(US Canada)(-05:00/-04:00)</option>
+        <option>Central Time(00:00)</option>
+        <option>Northern Time(05:00/04:00)</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="sisId">SIS ID:</label></td>
+    <td>CS4550.12631.202410</td>
+  </tr>
+  <tr>
+    <td><label for="subaccount">Subaccount:</label></td>
+    <td>CS Undergrad</td>
+  </tr>
+  <tr>
+    <td><label for="term">Term:</label></td>
+    <td>202410_1 Fall 2023 Semester Full Term</td>
+  </tr>
+  <tr>
+    <td><label for="participation">Participation:</label></td>
+    <td>
+      <select id="participation">
+        <option selected>Term</option></select
+      ><br />
+      Course participation is limited to <b>term</b> start and end dates.<br />
+      <label for="start"><b>Start</b></label
+      ><br />
+      <input type="date" id="start" /><br />
+      <label for="end"><b>End</b></label
+      ><br />
+      <input type="date" id="end" /><br />
+      <input
+        type="checkbox"
+        value="restrictStudents"
+        name="restrictStudents"
+        id="chkbox-restrictStudents"
+      />
+      <label>Restrict students from viewing course before term start date</label
+      ><br />
+      <input
+        type="checkbox"
+        value="restrictStudents2"
+        name="restrictStudents2"
+        id="chkbox-restrictStudents2"
+      />
+      <label>Restrict students from viewing course after term start date</label>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="dueTime">Default due time:</label></td>
+    <td>
+      <select>
+        <option selected>Account default (11:59pm)</option>
+        <option>9:00pm</option>
+        <option>12:00am</option></select
+      ><br />
+      This influeneces the user interface for setting due dates. It does not
+      change the time due for any existing assignments.
+    </td>
+  </tr>
+</table>
