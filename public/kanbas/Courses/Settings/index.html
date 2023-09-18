@@ -1,7 +1,9 @@
 <ul>
   <li>Course Details</li>
   <li>Sections</li>
-  <li>Navigation</li>
+  <li>
+    <a href="/Kanbas/Courses/Settings/Navigation/screen.html">Navigation</a>
+  </li>
   <li>Apps</li>
   <li>Feature Options</li>
   <li>Integrations</li>
@@ -95,4 +97,110 @@
       change the time due for any existing assignments.
     </td>
   </tr>
+  <tr>
+    <td><label for="language">Language:</label></td>
+    <td>
+      <select>
+        <option selected>
+          Not set (user- configurable, defaults to English(Unit 1))
+        </option></select
+      ><br />
+      This will override any user/system language preferences. This is only
+      recommended for foreign language courses
+    </td>
+  </tr>
+  <tr>
+    <td>File Storage</td>
+    <td>100000 megabytes</td>
+  </tr>
+  <tr>
+    <td>Large Course:</td>
+    <td>
+      <input
+        type="checkbox"
+        value="largeCourse"
+        name="largeCourse"
+        id="chkbox-largeCourse"
+      />
+      <label>Launch SpeedGrader Filtered by Student Group</label>
+    </td>
+  </tr>
+  <tr>
+    <td>Grading Scheme:</td>
+    <td>
+      <input
+        type="checkbox"
+        value="gradingScheme"
+        name="gradingScheme"
+        id="chkbox-gradingScheme"
+      />
+      <label>Enable course grading scheme</label>
+    </td>
+  </tr>
+  <tr>
+    <td>License:</td>
+    <td>
+      <select>
+        <option selected>Private(Copyrighted)</option></select
+      >?
+    </td>
+  </tr>
+  <tr>
+    <td>File Copyright:</td>
+    <td>
+      <input
+        type="checkbox"
+        value="fileCopyright"
+        name="fileCopyright"
+        id="chkbox-fileCopyright"
+      />
+      <label
+        >Copyright and license information must be provided for files before
+        they are published.</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Visibility</td>
+    <td>
+      If you need to make your course public please contact your
+      administrator/support<br />
+      <select disabled>
+        <option selected>Course</option></select
+      >?<br />
+      <input
+        type="checkbox"
+        value="visibility"
+        name="visibility"
+        id="chkbox-visibility"
+      />
+      <label>Include this course in the public course index</label>
+    </td>
+  </tr>
+  <tr>
+    <td>Format</td>
+    <td>
+      <select>
+        <option selected>On-Campus</option>
+        <option>Online</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Mastery Paths:</td>
+    <td>
+      <input type="checkbox" value="paths" name="paths" id="chkbox-paths" />
+      <label
+        >Enable individual learning paths for students based on assesment</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>
+      <textarea col="50" rows="8"></textarea><br />
+      <a href="">more options</a>
+    </td>
+  </tr>
 </table>
+<button>Update Course Details</button>

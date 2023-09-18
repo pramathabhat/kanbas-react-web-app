@@ -1,2 +1,51 @@
-<h1>Edit Profile</h1>
-<input value="Pramatha Bhat" />
+<h1>Edit Profile - Pramatha Bhat</h1>
+<form action="/Kanbas/Account/Profile/screen.html">
+  <label for="fullName">Name:</label>
+  <input id="fullName" name="fullName" type="text" value="Pramatha Bhat" />
+  <br /><br />
+  <label for="pronouns">Pronouns:</label>
+  <select id="pronouns">
+    <option>he/him</option>
+    <option selected>she/her</option>
+    <option>they/them</option>
+    <option>None</option></select
+  ><br /><br />
+  <label for="title">Title:</label>
+  <input id="title" name="title" type="text" />
+  <br /><br />
+  <h3>Contact</h3>
+  No registered services, you can add some to the
+  <a href="#">settings</a> page.<br />
+  <label for="biography"><h3>Biography:</h3></label>
+  <textarea id="biography" name="biography" cols="50" rows="4">Student</textarea
+  ><br /><br />
+  <h4>Links</h4>
+  <ul>
+    <li>
+      <a href="www.youtube.com">Youtube Links to an external site.</a>
+    </li>
+  </ul>
+  <table>
+    <th>
+      <tr>
+        <td>Title</td>
+        <td>URL</td>
+        <td></td>
+      </tr>
+    </th>
+    <tr>
+      <td><input value="Youtube" />-></td>
+      <td>
+        <input
+          value="https://www.youtube.com/channel/UCltndcEy1gKK5k-hR44EdvA"
+        />
+      </td>
+      <td><a href="#">Remove</a></td>
+    </tr>
+  </table>
+  <button>Add another link</button><br />
+  <button>Cancel</button>
+  <button>Save Profile</button><br />
+  <button>Edit Profile</button>
+  <button>Cancel Editing</button>
+</form>

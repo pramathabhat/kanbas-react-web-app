@@ -115,27 +115,26 @@ This is the first assignment to build Kanbas</textarea
         <option>Required</option></select
       ><br /><br />
       <label for="groupAssignment">Group Assignment</label><br />
-      <select>
-        <option>This is a group assignment</option></select
-      ><br /><br />
+      <input type="checkbox" id="groupAssignment" />This is a group
+      assignment<br /><br />
       <label for="peerReviews">Peer Reviews</label><br />
-      <select>
-        <option>Require Peer Reviews</option></select
-      ><br /><br />
+      <input type="checkbox" id="peerReviews" />Require Peer Reviews
+      <br /><br />
       <label for="assign">Assign</label><br />
       Assign To<br />
       <input value="Everyone" id="assign" /><br /><br />
       <label for="dueDate">Due</label><br />
       <input
+        id="dueDate"
         type="date"
         value="2023-09-19"
         min="2023-09-15"
         max="2023-10-15"
       /><br /><br />
       <label for="availableFrom">Available from</label><br />
-      <input type="date" value="2023-09-10" /><br /><br />
+      <input type="date" value="2023-09-10" id="availableFrom" /><br /><br />
       <label for="until">Until</label><br />
-      <input type="date" value="2023-09-19" /><br /><br />
+      <input type="date" value="2023-09-19" id="until" /><br /><br />
       <button>Cancel</button>
       <button>Save</button>
     </td>
