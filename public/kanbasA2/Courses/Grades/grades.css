@@ -1,0 +1,148 @@
+.wd-flex-row-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.wd-width-75px {
+  width: 75px;
+}
+.wd-center-text {
+  text-align: center;
+}
+.wd-flex-col-container {
+  display: flex;
+  flex-direction: column;
+}
+.wd-darkbackground-height {
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+.wd-paddingtop-10p {
+  padding-top: 10%;
+}
+.wd-paddingbottom-10p {
+  padding-bottom: 10%;
+}
+.wd-fontcolor-darkred {
+  color: rgb(193, 7, 7);
+}
+.wd-link-color-white {
+  text-decoration: none;
+  color: white;
+}
+.wd-paddingtop-6p {
+  padding-top: 6%;
+}
+.wd-paddingbottom-6p {
+  padding-bottom: 6%;
+}
+.wd-lightbackground {
+  background-color: white;
+  color: red;
+}
+.wd-fontcolor-black {
+  color: black;
+}
+.wd-breadcrumb-symbol {
+  --bs-breadcrumb-divider: ">";
+}
+.wd-leftnav-fontsize-12_5px {
+  font-size: 12.5px;
+}
+.wd-paddingtop-20px {
+  padding-top: 20px;
+}
+.wd-word-wrap {
+  word-wrap: break-word;
+}
+.wd-link-color-crimson {
+  text-decoration: none;
+  color: rgb(193, 7, 7);
+}
+.wd-link-color-crimson:hover {
+  color: rgb(193, 7, 7);
+}
+.wd-link-black {
+  text-decoration: none;
+  color: black;
+}
+.wd-link-black:hover {
+  color: black;
+}
+.wd-vertical-line {
+  border-left: 2px solid black;
+  height: 100px;
+  padding-left: 1px;
+}
+.wd-padding-left-3p {
+  padding-left: 3%;
+}
+.wd-padding-right-3p {
+  padding-right: 3%;
+}
+.wd-width-100p {
+  width: 100%;
+}
+.wd-width-185px {
+  width: 185px;
+}
+.wd-course-font {
+  font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 200;
+}
+.wd-paddingtop-15px {
+  padding-top: 15px;
+}
+.wd-paddingbottom-15px {
+  padding-bottom: 15px;
+}
+.wd-fontcolor-crimson {
+  color: rgb(193, 7, 7);
+}
+.wd-vertical-line {
+  border-left: 2px solid black;
+  height: 100px;
+  padding-left: 1px;
+}
+.wd-display-flex {
+  display: flex;
+}
+.wd-padding-left-5p {
+  padding-left: 5%;
+}
+.wd-padding-right-2p {
+  padding-right: 2%;
+}
+.wd-no-wrap {
+  white-space: nowrap;
+}
+.wd-text-align-right {
+  text-align: right;
+}
+.wd-button-padding-top-bottom-4px {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.wd-paddingtop-10px {
+  padding-top: 10px;
+}
+.wd-display-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+.wd-flexgrow-1-display-flex-justifycontent {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.wd-margin-left-5px {
+  margin-left: 5px;
+}
+.wd-button-margin-7px {
+  margin-bottom: 7px;
+}
+.list-group-item:not(.list-group-item-secondary) {
+  border-left: 4px solid green;
+}
