@@ -90,9 +90,11 @@ const CourseStatus = () => {
         <a href="#" className="wd-link-color-crimson">
           Lecture 1
         </a>
+        <br />
         <a href="#" className="wd-link-color-crimson">
           Quiz
         </a>
+        <br />
         <a href="#" className="wd-link-color-crimson">
           Grade A1-HTML
         </a>

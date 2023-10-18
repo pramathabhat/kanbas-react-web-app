@@ -1,22 +1,22 @@
-.module-list {
+.wd-module-list {
   width: 80%;
   margin: auto;
   padding: 20px;
 }
 
-.module-item {
+.wd-module-item {
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
 }
 
-.module-title {
+.wd-module-title {
   color: #333;
   margin-bottom: 10px; /* Adjust spacing */
 }
 
-.module-description {
+.wd-module-description {
   color: #777;
 }
 
