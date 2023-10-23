@@ -1,0 +1,12 @@
+.wd-btn-cancel,
+.wd-btn-cancel:hover {
+  background-color: gainsboro;
+  border-color: black;
+  color: black;
+}
+
+.wd-btn-save,
+.wd-btn-save:hover {
+  background-color: crimson;
+  margin-left: 10px;
+}
