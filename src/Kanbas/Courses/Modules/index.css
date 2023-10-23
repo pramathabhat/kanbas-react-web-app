@@ -1,0 +1,49 @@
+.module-list {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.module-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.module-title {
+  color: #333;
+  margin-bottom: 10px; /* Adjust spacing */
+}
+
+.module-description {
+  color: #777;
+}
+
+.wd-flex-3 {
+  flex: 3;
+}
+
+.wd-width-100p {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.wd-display-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.wd-flexgrow-1-display-flex-justifycontent {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wd-margin-left-5px {
+  margin-left: 5px;
+}
+
+.wd-paddingtop-10px {
+  padding-top: 10px;
+}

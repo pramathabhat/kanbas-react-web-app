@@ -1,0 +1,16 @@
+.list-group-item {
+  color: crimson;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+}
+.list-group-nav {
+  margin-left: 10px;
+}
+.list-group-nav.active {
+  color: black;
+  background-color: white;
+  border: none;
+  border-left: 2px solid black;
+  border-radius: initial;
+}

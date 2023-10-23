@@ -1,0 +1,16 @@
+.wd-flex-row-container > * {
+  margin-right: 10px;
+}
+
+.wd-flex-col-container > * {
+  margin-bottom: 7px;
+}
+
+.wd-course-status {
+  margin-top: 10px;
+}
+
+.wd-flex-row-container {
+  display: flex;
+  gap: 10px;
+}
