@@ -1,5 +1,5 @@
 import "./index.css";
-import { FaCircle, FaEdit, FaCheckCircle, FaEllipsisV } from "react-icons/fa";
+import { FaEdit, FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
