@@ -107,3 +107,12 @@
 .wd-dashboard-heading {
   width: 100%;
 }
+.wd-deleteBtn {
+  background-color: crimson;
+}
+.wd-addBtn {
+  background-color: #198754;
+}
+.wd-addBtn:hover {
+  background-color: #198754;
+}

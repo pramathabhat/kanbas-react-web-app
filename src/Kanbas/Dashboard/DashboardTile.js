@@ -1,8 +1,8 @@
 import "./index.css";
 import { Link } from "react-router-dom";
-import { FaEllipsisV, FaEdit } from "react-icons/fa";
+import { FaEllipsisV } from "react-icons/fa";
 
-function DashboardTile({ course, index }) {
+function DashboardTile({ course, index, deleteCourse, setCourse }) {
   const classList = [
     "bg-secondary",
     "bg-primary",
@@ -12,6 +12,7 @@ function DashboardTile({ course, index }) {
     "bg-danger",
   ];
   const tileClass = classList[index % classList.length];
+
   return (
     <div className="wd-card-padding col-12 col-md-6 col-lg-4 col-xl-3">
       <div className="card">
@@ -32,9 +33,26 @@ function DashboardTile({ course, index }) {
             <p className="wd-card-text-margin-bottom-10px wd-card-body-font-14px">
               Fall 2023 Semester Full Term
             </p>
-            <i className="far fa-edit">
-              <FaEdit size={32} />
-            </i>
+            <div>
+              <button
+                className="btn btn-secondary wd-deleteBtn"
+                onClick={(event) => {
+                  event.preventDefault();
+                  deleteCourse(course._id);
+                }}
+              >
+                Delete
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setCourse(course);
+                }}
+              >
+                Edit
+              </button>
+            </div>
           </div>
         </Link>
       </div>
