@@ -3,7 +3,7 @@ import DashboardTile from "./DashboardTile";
 
 function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }) {
   return (
-    <>
+    <div className="wd-dashboardWrapper">
       <h1>Dashboard</h1>
       <hr />
       <span className="wd-published-courses ms-3">
@@ -64,7 +64,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

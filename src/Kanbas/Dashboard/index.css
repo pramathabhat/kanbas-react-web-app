@@ -116,3 +116,7 @@
 .wd-addBtn:hover {
   background-color: #198754;
 }
+
+.wd-dashboardWrapper {
+  width: 99%;
+}
