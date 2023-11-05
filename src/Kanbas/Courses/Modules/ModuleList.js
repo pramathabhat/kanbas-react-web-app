@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
-import { IoMdMore } from "react-icons/io";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule as setModuleAction,
+} from "./modulesReducer";
 import "./index.css";
+import { IoMdMore } from "react-icons/io";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
+  useEffect(() => {}, [courseId, dispatch]);
+
+  const handleAddModule = () => {
+    dispatch(addModule({ ...module, course: courseId }));
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    dispatch(deleteModule(moduleId));
+  };
+
+  const handleUpdateModule = () => {
+    dispatch(updateModule(module));
+  };
 
   return (
     <>
@@ -33,12 +54,53 @@ function ModuleList() {
         </div>
       </div>
       <ul className="list-group wd-module-list">
+        <li className="list-group-item">
+          <div className="wd-formWrapper">
+            <div className="wd-formLeftWrapper">
+              <input
+                className="form-control wd-modName"
+                value={module.name}
+                onChange={(e) => dispatch(setModuleAction({ ...module, name: e.target.value }))}
+              />
+              <textarea
+                className="form-control"
+                value={module.description}
+                onChange={(e) =>
+                  dispatch(setModuleAction({ ...module, description: e.target.value }))
+                }
+              />
+            </div>
+            <div className="wd-formRightWrapper">
+              <button className="btn btn-secondary wd-addModBtn" onClick={handleAddModule}>
+                Add
+              </button>
+              <button className="btn btn-secondary" onClick={handleUpdateModule}>
+                Update
+              </button>
+            </div>
+          </div>
+        </li>
+
         {modules
-          .filter((module) => module.course === courseId)
-          .map((module, index) => (
+          .filter((mod) => mod.course === courseId)
+          .map((mod, index) => (
             <li key={index} className="list-group-item wd-module-item">
-              <h3 className="wd-module-title">{module.name}</h3>
-              <p className="wd-module-description">{module.description}</p>
+              <h3 className="wd-module-title">{mod.name}</h3>
+              <p className="wd-module-description">{mod.description}</p>
+              <div className="wd-module-actions">
+                <button
+                  className="btn btn-secondary wd-deleteBtn"
+                  onClick={() => handleDeleteModule(mod._id)}
+                >
+                  Delete
+                </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => dispatch(setModuleAction(mod))}
+                >
+                  Edit
+                </button>
+              </div>
             </li>
           ))}
       </ul>

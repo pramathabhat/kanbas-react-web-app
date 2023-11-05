@@ -47,3 +47,34 @@
 .wd-paddingtop-10px {
   padding-top: 10px;
 }
+
+.wd-deleteBtn {
+  margin-right: 10px;
+  background-color: crimson;
+}
+
+.wd-deleteBtn:hover {
+  background-color: crimson;
+}
+
+.wd-formWrapper {
+  display: flex;
+}
+
+.wd-formLeftWrapper {
+  width: 65%;
+}
+
+.wd-formRightWrapper {
+  width: 35%;
+  margin-left: 10px;
+}
+
+.wd-modName {
+  margin-bottom: 10px;
+}
+
+.wd-addModBtn {
+  margin-right: 10px;
+  background-color: #198754;
+}
