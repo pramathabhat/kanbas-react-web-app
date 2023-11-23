@@ -1,33 +1,49 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import "./index.css";
+import { IoMdMore } from "react-icons/io";
 import {
   addModule,
   deleteModule,
   updateModule,
   setModule as setModuleAction,
+  setModules,
 } from "./modulesReducer";
-import "./index.css";
-import { IoMdMore } from "react-icons/io";
+import {
+  findModulesForCourse,
+  createModule,
+  findModuleToDelete,
+  findModuleToUpdate,
+} from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
-  useEffect(() => {}, [courseId, dispatch]);
 
   const handleAddModule = () => {
-    dispatch(addModule({ ...module, course: courseId }));
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
   };
 
   const handleDeleteModule = (moduleId) => {
-    dispatch(deleteModule(moduleId));
+    findModuleToDelete(moduleId).then((_) => {
+      dispatch(deleteModule(moduleId));
+    });
   };
 
-  const handleUpdateModule = () => {
+  const handleUpdateModule = async () => {
+    await findModuleToUpdate(module);
     dispatch(updateModule(module));
   };
+
+  useEffect(() => {
+    findModulesForCourse(courseId).then((modules) => dispatch(setModules(modules)));
+  }, [courseId, dispatch]);
 
   return (
     <>
