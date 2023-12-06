@@ -32,6 +32,7 @@ function Signup() {
         className="form-control mb-1"
       />
       <input
+        type="password"
         value={credentials.password}
         placeholder="Password"
         onChange={(e) =>
@@ -42,7 +43,9 @@ function Signup() {
         }
         className="form-control mb-1"
       />
-      <button className="btn btn-secondary w-100" onClick={signup}>Signup</button>
+      <button className="btn btn-secondary w-100" onClick={signup}>
+        Signup
+      </button>
     </div>
   );
 }

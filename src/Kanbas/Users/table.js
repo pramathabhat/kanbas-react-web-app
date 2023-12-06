@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as client from "./client";
-import {
-  BsFillCheckCircleFill,
-  BsPencil,
-  BsPlusCircleFill,
-  BsTrash3Fill,
-} from "react-icons/bs";
+import { BsFillCheckCircleFill, BsPencil, BsPlusCircleFill, BsTrash3Fill } from "react-icons/bs";
 
 function UserTable() {
   const [users, setUsers] = useState([]);
@@ -51,26 +46,20 @@ function UserTable() {
   });
 
   const isUserValid = () => {
-    return (
-      user.username &&
-      user.password &&
-      user.firstName &&
-      user.lastName &&
-      user.role
-    );
+    return user.username && user.password && user.firstName && user.lastName && user.role;
   };
 
   const createUser = async () => {
     if (isUserValid()) {
       try {
         const newUser = await client.createUser(user);
-        setUser({
-          username: "",
-          password: "",
-          role: "USER",
-          firstName: "",
-          lastName: "",
-        });
+        // setUser({
+        //   username: "",
+        //   password: "",
+        //   role: "USER",
+        //   firstName: "",
+        //   lastName: "",
+        // });
         setUsers([newUser, ...users]);
       } catch (err) {
         console.log(err);
@@ -107,6 +96,7 @@ function UserTable() {
             </td>
             <td>
               <input
+                type="password"
                 value={user.password}
                 placeholder="Password"
                 className="form-control mb-1"
@@ -118,9 +108,7 @@ function UserTable() {
                 value={user.firstName}
                 placeholder="First Name"
                 className="form-control mb-1"
-                onChange={(e) =>
-                  setUser({ ...user, firstName: e.target.value })
-                }
+                onChange={(e) => setUser({ ...user, firstName: e.target.value })}
               />
             </td>
             <td>
@@ -145,10 +133,7 @@ function UserTable() {
             </td>
             <td>
               <BsPlusCircleFill onClick={createUser} className="me-2 fs-1" />
-              <BsFillCheckCircleFill
-                onClick={updateUser}
-                className="me-2 fs-1 text"
-              />
+              <BsFillCheckCircleFill onClick={updateUser} className="me-2 fs-1 text" />
             </td>
           </tr>
         </thead>

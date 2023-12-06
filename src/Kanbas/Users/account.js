@@ -32,25 +32,20 @@ function Account() {
       {account ? (
         <div>
           <input
+            type="password"
             value={account.password}
-            onChange={(e) =>
-              setAccount({ ...account, password: e.target.value })
-            }
+            onChange={(e) => setAccount({ ...account, password: e.target.value })}
             className="form-control mb-1"
           />
           <input
             value={account.firstName}
-            onChange={(e) =>
-              setAccount({ ...account, firstName: e.target.value })
-            }
+            onChange={(e) => setAccount({ ...account, firstName: e.target.value })}
             className="form-control mb-1"
             placeholder="First Name"
           />
           <input
             value={account.lastName}
-            onChange={(e) =>
-              setAccount({ ...account, lastName: e.target.value })
-            }
+            onChange={(e) => setAccount({ ...account, lastName: e.target.value })}
             className="form-control mb-1"
             placeholder="Last Name"
           />
@@ -85,9 +80,7 @@ function Account() {
             Signout
           </button>
 
-          {saveMessage && (
-            <div className="alert alert-success w-100">{saveMessage}</div>
-          )}
+          {saveMessage && <div className="alert alert-success w-100">{saveMessage}</div>}
         </div>
       ) : (
         <p>Not signed in</p>
