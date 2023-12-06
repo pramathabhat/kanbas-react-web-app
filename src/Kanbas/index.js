@@ -7,32 +7,12 @@ import store from "./store";
 import { Provider } from "react-redux";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Signin from "./Users/signin";
+import Account from "./Users/account";
+import UserTable from "./Users/table";
+import Signup from "./Users/signup";
 
 function Kanbas() {
-  // const [courses, setCourses] = useState(db.courses);
-  // const [course, setCourse] = useState({
-  //   name: "New Course Name",
-  //   number: "New Course Number",
-  //   startDate: "2023-10-10",
-  //   endDate: "2023-12-12",
-  // });
-  // const addNewCourse = () => {
-  //   setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
-  // };
-  // const deleteCourse = (courseId) => {
-  //   setCourses(courses.filter((course) => course._id !== courseId));
-  // };
-  // const updateCourse = () => {
-  //   setCourses(
-  //     courses.map((c) => {
-  //       if (c._id === course._id) {
-  //         return course;
-  //       } else {
-  //         return c;
-  //       }
-  //     })
-  //   );
-  // };
   const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
   console.log(URL);
 
@@ -83,8 +63,14 @@ function Kanbas() {
         <KanbasNavigation />
         <div style={{ width: "100%", marginLeft: "10px" }}>
           <Routes>
+            <Route path="/admin/users" element={<UserTable />} />
+            <Route path="signin" element={<Signin />} />
+            <Route path="signup" element={<Signup />} />
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            {/* <Route path="Account" element={<h1>Account</h1>} /> */}
+            {/* <Route path="Account" element={<Account />} /> */}
+            <Route path="/account" element={<Account />} />
+            <Route path="/account/:id" element={<Account />} />
             <Route
               path="Dashboard"
               element={
